@@ -1,4 +1,7 @@
 ISync::Application.routes.draw do
+  resources :posts
+  root to: 'posts#index'
+
   get "pages/new"
   get "pages/create"
   get "pages/update"
@@ -6,7 +9,5 @@ ISync::Application.routes.draw do
   get "pages/destroy"
   get "pages/index"
   get "pages/show"
-  resources :posts
 
-  root 'posts#index' resources :posts end 
 end
