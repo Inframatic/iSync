@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130827143933) do
+ActiveRecord::Schema.define(version: 20130828124655) do
 
   create_table "models", force: true do |t|
     t.string   "email",                  default: "", null: false
@@ -34,6 +34,15 @@ ActiveRecord::Schema.define(version: 20130827143933) do
   create_table "posts", force: true do |t|
     t.string   "title"
     t.text     "body"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "tracks", force: true do |t|
+    t.string   "name"
+    t.text     "description"
+    t.string   "band_image"
+    t.string   "song_link"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
